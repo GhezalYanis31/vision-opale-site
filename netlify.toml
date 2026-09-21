@@ -1,0 +1,77 @@
+# Site statique : aucun build, Netlify publie le dossier site/ tel quel.
+[build]
+  publish = "site"
+
+# En-têtes de sécurité. La politique de contenu n'autorise que les ressources
+# du site lui-même : c'est ce qui garantit « aucune ressource externe ».
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' mailto:"
+
+# Les polices ne changent jamais : cache long.
+[[headers]]
+  for = "/polices/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Films et images : une semaine (renommer le fichier pour forcer une mise à jour immédiate).
+[[headers]]
+  for = "/films/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Adresses courtes : visionopale.fr/offre → offre.html, etc.
+[[redirects]]
+  from = "/methode"
+  to = "/methode.html"
+  status = 301
+[[redirects]]
+  from = "/offre"
+  to = "/offre.html"
+  status = 301
+[[redirects]]
+  from = "/films"
+  to = "/films.html"
+  status = 301
+[[redirects]]
+  from = "/a-propos"
+  to = "/a-propos.html"
+  status = 301
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+[[redirects]]
+  from = "/english"
+  to = "/english.html"
+  status = 301
+[[redirects]]
+  from = "/en"
+  to = "/english.html"
+  status = 301
+[[redirects]]
+  from = "/cgv"
+  to = "/cgv.html"
+  status = 301
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales.html"
+  status = 301
+[[redirects]]
+  from = "/confidentialite"
+  to = "/confidentialite.html"
+  status = 301
+[[redirects]]
+  from = "/charte-ia"
+  to = "/charte-ia.html"
+  status = 301

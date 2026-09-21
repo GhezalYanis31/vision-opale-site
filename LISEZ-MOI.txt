@@ -1,0 +1,57 @@
+SITE DÉFINITIF VISION OPALE — visionopale.fr
+Version du 21 septembre 2026 (passage en micro-entreprise)
+
+CE QUE CONTIENT CE DOSSIER
+  site/ ................... tout ce qui est publié en ligne
+    index.html ............ accueil (film de démonstration en tête de page)
+    methode.html .......... la méthode, ce que fait l'IA, questions fréquentes
+    offre.html ............ tarifs publics, garanties, paiement, Cercle Fondateur
+    films.html ............ le film de démonstration en grand
+    a-propos.html ......... les deux co-fondateurs, les engagements, l'entreprise
+    contact.html .......... coordonnées et formulaire
+    english.html .......... version anglaise (une page)
+    mentions-legales.html, confidentialite.html, charte-ia.html, cgv.html
+    404.html .............. page « introuvable »
+    styles.css, site.js, polices/, images/, films/, favicon, robots.txt, sitemap.xml
+  netlify.toml ............ réglages Netlify (dossier publié, sécurité, cache)
+  blancs-a-completer.md ... ce qui reste à faire (non publié)
+
+IDENTITÉ LÉGALE AFFICHÉE
+  Yanis Ghezal, entrepreneur individuel (EI), micro-entreprise
+  Nom commercial : Vision Opale
+  SIREN 992 211 409 · SIRET 992 211 409 00014 · Registre national des entreprises
+  A28, 29 avenue d'Andromède, 31700 Blagnac
+  TVA non applicable, art. 293 B du CGI
+  Email unique sur le site et les documents : contact@visionopale.fr
+
+HÉBERGEMENT ET PUBLICATION
+  - Hébergeur : Netlify (projet « vision-opale »). Le site est statique : aucun
+    build, Netlify publie le dossier site/ tel quel.
+  - Code source : dépôt GitHub privé « vision-opale-site ».
+  - Pour modifier le site : modifier les fichiers de site/, puis publier une
+    nouvelle version sur Netlify (glisser-déposer le dossier site/ dans l'onglet
+    « Deploys » du projet, ou relier le dépôt GitHub au projet pour que chaque
+    modification poussée sur GitHub soit publiée automatiquement).
+  - Pour mettre à jour la date <lastmod> de sitemap.xml à chaque modification.
+
+NOM DE DOMAINE visionopale.fr
+  Tant que le domaine n'est pas relié, le site est visible à l'adresse
+  https://vision-opale.netlify.app. Pour le relier :
+  1. Netlify > projet vision-opale > Domain management > Add a domain > visionopale.fr
+  2. Chez le registraire du domaine, créer les enregistrements DNS indiqués par
+     Netlify (ou déléguer le domaine à Netlify DNS). NE PAS toucher aux
+     enregistrements MX, SPF, DKIM et DMARC : ce sont eux qui font fonctionner
+     la messagerie contact@visionopale.fr.
+  3. Netlify active ensuite le certificat HTTPS tout seul (Let's Encrypt).
+
+CE QUI EST VOLONTAIRE
+  - Aucun cookie, aucun outil de mesure d'audience, aucune ressource externe :
+    aucun bandeau cookies n'est nécessaire. La politique de sécurité (netlify.toml)
+    bloque d'ailleurs toute ressource extérieure au site.
+  - Le formulaire de contact ouvre la messagerie du visiteur avec le message
+    prérempli : rien n'est enregistré sur le site, donc rien à sécuriser.
+  - Les polices sont hébergées avec le site (licences OFL dans polices/).
+  - Le film est fourni en deux tailles : 720p (4 Mo) chargée par défaut,
+    1080p (10 Mo) chargée automatiquement sur les grands écrans.
+
+À COMPLÉTER — voir blancs-a-completer.md.

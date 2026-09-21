@@ -27,7 +27,7 @@ IDENTITÉ LÉGALE AFFICHÉE
 HÉBERGEMENT ET PUBLICATION
   - Hébergeur : Netlify (projet « vision-opale »). Le site est statique : aucun
     build, Netlify publie le dossier site/ tel quel.
-  - Code source : dépôt GitHub privé « vision-opale-site ».
+  - Code source : dépôt GitHub public « GhezalYanis31/vision-opale-site ».
   - Pour modifier le site : modifier les fichiers de site/, puis publier une
     nouvelle version sur Netlify (glisser-déposer le dossier site/ dans l'onglet
     « Deploys » du projet, ou relier le dépôt GitHub au projet pour que chaque
